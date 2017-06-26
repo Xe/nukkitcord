@@ -18,7 +18,7 @@ public class EventListener implements Listener {
     private DiscordAPI dis;
     private final String botChannel;
 
-    public EventListener(MainClass main, String botToken, String bc) {
+    public EventListener(MainClass main, String botToken, String bc, final String gameName) {
         this.mc = main;
         this.botChannel = bc;
 
@@ -27,7 +27,7 @@ public class EventListener implements Listener {
 
         this.dis.connect(new FutureCallback<DiscordAPI>() {
             public void onSuccess(DiscordAPI api) {
-                api.setGame("greedo.xeserv.us");
+                api.setGame(gameName);
                 mc.getLogger().info("discord login successful");
                 // register listener
                 api.registerListener(new MessageCreateListener() {

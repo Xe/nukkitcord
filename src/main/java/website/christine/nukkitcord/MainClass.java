@@ -30,7 +30,8 @@ public class MainClass extends PluginBase {
                 new LinkedHashMap<String, Object>() {
                     {
                         put("discord-bot-key", "<discord bot api key>");
-                        put("discord-relay-channel", "<channel id>"); //you can also put other standard objects!
+                        put("discord-relay-channel", "<channel id>");
+                        put("game-name", "<name of game bot will be playing>");
                     }
                 });
         this.getLogger().info(String.valueOf(config.get("discord-relay-channel")));
@@ -40,7 +41,8 @@ public class MainClass extends PluginBase {
         this.getServer().getPluginManager().registerEvents(new EventListener(
                 this,
                 config.getString("discord-bot-key"),
-                config.getString("discord-relay-channel")),
+                config.getString("discord-relay-channel"),
+                config.getString("game-name")),
                 this);
     }
 
