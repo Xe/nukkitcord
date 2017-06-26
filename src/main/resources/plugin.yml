@@ -1,0 +1,11 @@
+#name, main, version and api are required
+name: nukkitcord
+main: website.christine.nukkitcord.MainClass
+#remember version and api is string, don't write it like this: 1.0.0, or there will be an exception
+version: "1.0.0"
+api: ["1.0.0"]
+
+load: POSTWORLD
+author: NukkitCord
+description: Discord Plugin for Nukkit
+website: https://github.com/Xe/NukkitCord
